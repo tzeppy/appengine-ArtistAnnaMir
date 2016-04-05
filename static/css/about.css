@@ -1,0 +1,10 @@
+
+#cright {
+    font-size: 20px;
+    text-align: right;
+    width: 450px;
+    line-height: 300%;
+    // overflow-y: scroll;
+    // max-height: 500px;
+}
+

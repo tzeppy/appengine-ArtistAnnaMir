@@ -1,0 +1,22 @@
+
+figure {
+    float: left;
+    vertical-align: top;
+    // width: 160px;
+    margin: 3px 3px 3px 3px;
+}
+
+figure img {
+    border: 2px solid #000;
+    width: 140px;
+    // padding: 1px;
+}
+
+figure img:hover {
+    border: 2px solid #888;
+}
+
+#cleft {
+    width: 500px;
+}
+

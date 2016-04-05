@@ -1,0 +1,40 @@
+{% extends "master.html" %}
+{% block TITLE %}
+  <title>Artist Anna Mir - Portfolio</title>
+{% endblock %}
+{% block HEAD %}
+    <link rel="stylesheet" href="/static/css/folio_view_single.css" type="text/css" charset="utf-8"></link>
+{% endblock %}
+
+{% block BODY %}
+<div id="content">
+  <div class="pc" id="left_side">
+    <div>
+      <img src="/static/images/arrow_left_off.gif"  onclick="prev();"></img>
+      <img src="/static/images/arrow_right_off.gif" onclick="next();"></img>
+    </div>
+    <figure>
+      <img src="/static/images/{{series}}/{{bname}}{{pn}}.jpg"></img>
+      <!--figcaption>Still Lifes</figcaption-->
+    </figure>
+  </div>
+  <div class="pc" id="right_side">
+    {% autoescape false %}
+    {{pic_text}}
+    {% endautoescape %}
+  </div>
+</div>
+{% endblock %}
+
+{% block SCRIPTS %}
+<script type="text/javascript">
+  function prev() {
+    window.location = '/portfolio/view_single/{{series}}/{{bname}}/{{pn - 1}}';
+  }
+
+  function next() {
+    window.location = '/portfolio/view_single/{{series}}/{{bname}}/{{pn + 1}}';
+  }
+  
+</script>
+{% endblock %}

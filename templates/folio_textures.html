@@ -1,0 +1,27 @@
+{% extends "master.html" %}
+{% block TITLE %}
+  <title>Artist Anna Mir - Portfolio</title>
+{% endblock %}
+{% block HEAD %}
+    <link rel="stylesheet" href="/static/css/folio_texture.css" type="text/css" charset="utf-8"></link>
+{% endblock %}
+
+{% block BODY %}
+<div id="content">
+
+ <div id="cleft">
+  {% for x in range(1,count+1) %}
+  <figure>
+    <a href="/portfolio/view_single/textures2/tex/{{x}}"><img src="/static/images/tn/textures2/tex{{x}}.jpg"></img></a>
+  </figure>
+  {% endfor %}
+ </div>
+
+</div>
+{% endblock %}
+
+{% block SCRIPTS %}
+<script type="text/javascript">
+
+</script>
+{% endblock %}

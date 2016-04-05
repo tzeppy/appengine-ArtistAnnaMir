@@ -1,0 +1,40 @@
+{% extends "master.html" %}
+{% block TITLE %}
+  <title>Artist Anna Mir - Portfolio</title>
+{% endblock %}
+{% block HEAD %}
+    <link rel="stylesheet" href="/static/css/folio.css" type="text/css" charset="utf-8"></link>
+{% endblock %}
+
+{% block BODY %}
+<div id="content">
+  <div id="cleft">
+      <h2>texture</h2><br>
+      <figure>
+	<a href="/portfolio/texture" title="texture"><img id="main" src="/static/images/tn/golf/golf1.jpg"></img></a>
+      </figure>
+  </div>
+
+  <div id="cright">
+      <h2>light</h2><br>
+      <div id="multibox">
+	
+	<a href="/portfolio/light" title="light">
+	  <img src="/static/images/tn/waterscapes/wat1.jpg"></img>
+	  <img src="/static/images/tn/waterscapes/wat3.jpg"></img>
+	  <img src="/static/images/tn/waterscapes/wat2.jpg"></img>
+	  <img src="/static/images/tn/landscapes/land14.jpg"></img>
+	  <img src="/static/images/tn/landscapes/land13.jpg"></img>
+	  <img src="/static/images/tn/waterscapes/wat7.jpg"></img>
+	</a>
+      </div>
+  </div>
+
+</div>
+{% endblock %}
+
+{% block SCRIPTS %}
+<script type="text/javascript">
+
+</script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "master.html" %}
+{% block TITLE %}
+  <title>Artist Anna Mir - Portfolio</title>
+{% endblock %}
+{% block HEAD %}
+    <link rel="stylesheet" href="/static/css/series.css" type="text/css" charset="utf-8"></link>
+{% endblock %}
+
+{% block BODY %}
+<div id="content">
+
+ <div id="cleft">
+  {% for x in range(1,count+1) %}
+  <figure>
+    <a href="/portfolio/view_single/{{series}}/{{bname}}/{{x}}"><img src="/static/images/tn/{{series}}/{{bname}}{{x}}.jpg"></img></a>
+  </figure>
+  {% endfor %}
+ </div>
+
+ <div id="cright">
+   {% autoescape false %}
+   {{pic_text}}
+   {% endautoescape %}
+ </div>
+</div>
+{% endblock %}
+
+{% block SCRIPTS %}
+<script type="text/javascript">
+
+</script>
+{% endblock %}

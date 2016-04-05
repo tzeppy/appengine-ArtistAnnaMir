@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: Tahoma, Geneva, sans-serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    color: #c0c0c0;
+}
+
+body {
+    background: #000;
+ }
+
+a {
+    text-decoration: none;
+}
+
+#name {
+    float: right;
+    margin: 0px 55px 0px 0px;
+    font-size: 26px;
+}
+
+#header {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    padding-left: 50px;
+}
+
+.nav {
+    list-style: none;
+    /* overflow: hidden;
+    margin-left: 50px; */
+}
+
+.nav li {
+    padding: 30px 35px 0 0;
+    display: block;
+    float: left;
+}
+
+.nav a {
+    // display: block;
+    // padding: 0px 25px 0px 0px;
+}
+
+.nav a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.cacross {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-top: 1px solid #333333;
+}
+
+#content {
+    width: 1000px;
+    min-height: 350px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+}
+
+#cleft {
+    float: left;
+    width: 400px;
+}
+
+#cpic {
+    width: 330px;
+    margin: 10px 10px 10px 0px;
+}
+
+#cright {
+    width: 400px;
+    float: right;
+    margin: 10px 40px 10px 0px;
+    line-height: 125%;
+}
+
+
+#footer {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    overflow: hidden;
+/*    color: #c0c0c0; */
+    padding-left: 50px;
+}
+
+
+.email_icon {
+    background-image: url("/static/images/icon_footer_mail_dark.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
+.email_icon:hover {
+    color: #FFFFFF;
+}
+
+.foot_item {
+    padding-right: 50px;
+}
+
+
+#sharing {
+    float: right;
+    margin: 0px 55px 0px 0px;
+}
+
+#fb {
+    vertical-align: bottom;
+}
+
+#tweet {
+    //display: block;
+    // padding: 0px 2px 0px 0px;
+    // background: url('https://twitter.com/favicons/favicon.ico') 1px center no-repeat;
+    // border: 1px solid #ccc;
+}
+
+#tweet img {
+    vertical-align: top;
+    width: 16px;
+}

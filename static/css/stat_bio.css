@@ -1,0 +1,19 @@
+
+#cleft {
+    width: 400px;
+    line-height: 100%;
+    // overflow-y: scroll;
+    // max-height: 500px;
+}
+
+#cleft {
+    margin: 10px 0px 0px 0px;
+}
+
+#cright {
+    width: 500px;
+    line-height: 100%;
+    // overflow-y: scroll;
+    // max-height: 500px;
+}
+

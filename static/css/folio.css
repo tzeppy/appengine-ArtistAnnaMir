@@ -1,0 +1,53 @@
+
+#main {
+    border: 2px solid #000;
+    width: 294px;
+}
+
+#main:hover {
+    border: 2px solid #888;
+}
+
+figure {
+    // float: left;
+    vertical-align: top;
+    // width: 140px;
+    margin: 3px 3px 3px 3px;
+}
+
+figure img {
+    border: 2px solid #000;
+    width: 140px;
+    padding: 2px;
+}
+
+// figure img:hover {
+//    border: 2px solid #888;
+//}
+
+#cleft {
+    width: 400px;
+}
+
+#cright {
+    width: 509px;
+    margin: 0px 0px 0px 0px;
+}
+
+#multibox {
+    float: left;
+    // width: 500px;
+    margin-right: 55px;
+    border: 2px solid #000;
+}
+
+#multibox img {
+    // border: 2px solid #000;
+//    width: 140px;
+    // padding: -2px;
+    margin: 3px 3px 3px 3px;
+}
+
+#multibox:hover {
+    border: 2px solid #888;
+}
