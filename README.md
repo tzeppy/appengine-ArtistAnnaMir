@@ -4,11 +4,12 @@ Google AppEngine project
 
 1. Install dependencies:
 
-% pip install -r requirements.txt -t lib
+`% pip install -r requirements.txt -t lib`
 
 2. Run locally:
 
-% python main.py
+`% python main.py`
 
 3. To deploy the application:
-% gcloud app deploy --version v2 --project artistannamir
+
+`% gcloud app deploy --version v2 --project artistannamir`
