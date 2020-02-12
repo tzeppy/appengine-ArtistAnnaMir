@@ -1,7 +1,6 @@
-## Python Flask Skeleton for Google App Engine
+# ArtistAnnaMir.com
 
-A skeleton for building Python applications on Google App Engine with the
-Runs using python 2.7 (std27 virtualenv)
+Google AppEngine project
 
 1. Install dependencies:
 
