@@ -21,38 +21,46 @@ seriesCountDict['main'] = ('main', 9)
 seriesCountDict['light'] = ('light', 6)
 seriesCountDict['textures2'] = ('tex', 20)
 
+
 @app.route("/")
 @app.route("/home")
 def home():
     return flask.render_template('home.html')
 
+
 @app.route("/about_artist")
 def about_artist():
     return flask.render_template('about_artist.html')
+
 
 @app.route("/statement_bio")
 def statement_bio():
     return flask.render_template('statement_bio.html')
 
+
 @app.route("/resume")
 def resume():
     return flask.render_template('resume.html')
+
 
 @app.route("/contact")
 def contact():
     return flask.render_template('contact.html')
 
+
 @app.route("/portfolio")
 def portfolio():
     return flask.render_template('portfolio.html')
+
 
 @app.route("/portfolio/texture")
 def folio_textures():
     global seriesCountDict
     series = 'textures2'
-    pic_text =""
-    
+    pic_text = ""
+
     return flask.render_template('folio_textures.html', series=series, pic_text=pic_text, bname=seriesCountDict[series][0], count=seriesCountDict[series][1])
+
 
 @app.route("/portfolio/<series>")
 def folio_series(series):
@@ -65,6 +73,7 @@ def folio_series(series):
     else:
         pic_text = ""
     return flask.render_template('folio_series.html', series=series, pic_text=pic_text, bname=seriesCountDict[series][0], count=seriesCountDict[series][1])
+
 
 @app.route("/portfolio/view_single/<series>/<bname>/<int:pn>")
 def folio_view_single(series, bname, pn):
@@ -82,3 +91,7 @@ def folio_view_single(series, bname, pn):
     else:
         pic_text = ""
     return flask.render_template('folio_view_single.html', series=series, bname=bname, pn=pn, pic_text=pic_text)
+
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=8080, debug=True)
