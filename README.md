@@ -9,10 +9,7 @@ Runs using python 2.7 (std27 virtualenv)
 
 2. Run locally:
 
-% dev_appserver.py .
+% python main.py
 
 3. To deploy the application:
-
-% appcfg.py update -A <your-project-id> -V v1 .
-
-(appcfg.py set_default_version -V v1 -A <your-project-id> )
+% gcloud app deploy --version v2 --project artistannamir
