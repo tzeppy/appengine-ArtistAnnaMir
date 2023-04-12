@@ -82,3 +82,7 @@ def folio_view_single(series, bname, pn):
     else:
         pic_text = ""
     return flask.render_template('folio_view_single.html', series=series, bname=bname, pn=pn, pic_text=pic_text)
+
+
+if __name__ == '__main__':
+    app.run(host="localhost", port=8080, debug=True)
