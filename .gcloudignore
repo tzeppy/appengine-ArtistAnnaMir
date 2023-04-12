@@ -1,0 +1,7 @@
+.gcloudignore
+.git
+.gitignore
+.python-version
+__pycache__/
+/setup.cfg
+env/
