@@ -7,20 +7,21 @@
 figure {
     float: left;
     vertical-align: top;
-    // width: 160px;
+    /* width: 160px; */
     margin: 0 5px 20px 5px;
 }
 
 figure img {
     border: 2px solid #000;
-    // background-color: #FFF;
+    /* background-color: #FFF; */
     padding: 1px;
-    max-width: 500px;
+    max-width: 100%;
+    height: auto;
 }
 
 figcaption {
-    // font: 1.1em/normal Arial, Helvetica, sans-serif;
-    // text-align: center;
+    /* font: 1.1em/normal Arial, Helvetica, sans-serif; */
+    /* text-align: center; */
     margin: 5px 0 0 0;
 }
 
@@ -29,7 +30,7 @@ figcaption {
 }
 
 #right_side {
-    // background-color: #aaa;
-    //float: right;
+    /* background-color: #aaa; */
+    /* float: right; */
     margin: 20px 50px 20px 50px;
 }

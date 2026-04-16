@@ -2,6 +2,7 @@
 #main {
     border: 2px solid #000;
     width: 294px;
+    max-width: 100%;
 }
 
 #main:hover {
@@ -9,9 +10,9 @@
 }
 
 figure {
-    // float: left;
+    /* float: left; */
     vertical-align: top;
-    // width: 140px;
+    /* width: 140px; */
     margin: 3px 3px 3px 3px;
 }
 
@@ -21,30 +22,31 @@ figure img {
     padding: 2px;
 }
 
-// figure img:hover {
-//    border: 2px solid #888;
-//}
+/* figure img:hover { */
+/*    border: 2px solid #888; */
+/* } */
 
 #cleft {
     width: 400px;
 }
 
 #cright {
-    width: 509px;
+    max-width: 509px;
+    width: 100%;
     margin: 0px 0px 0px 0px;
 }
 
 #multibox {
     float: left;
-    // width: 500px;
+    /* width: 500px; */
     margin-right: 55px;
     border: 2px solid #000;
 }
 
 #multibox img {
-    // border: 2px solid #000;
-//    width: 140px;
-    // padding: -2px;
+    /* border: 2px solid #000; */
+/*    width: 140px; */
+    /* padding: -2px; */
     margin: 3px 3px 3px 3px;
 }
 
