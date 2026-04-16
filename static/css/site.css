@@ -113,7 +113,7 @@ a {
         margin-right: 0;
     }
     
-    #name, #sharing {
+    #name {
         float: none;
         margin-top: 20px;
         margin-right: 0;
@@ -143,14 +143,7 @@ a {
 }
 
 
-#sharing {
-    float: right;
-    margin: 0px 55px 0px 0px;
-}
 
-#fb {
-    vertical-align: bottom;
-}
 
 
 #tweet img {
