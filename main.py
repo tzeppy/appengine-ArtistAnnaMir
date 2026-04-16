@@ -9,17 +9,17 @@ log = logging.getLogger(__name__)
 
 app = flask.Flask(__name__)
 
-seriesCountDict = defaultdict(int)
-seriesCountDict['golf'] = ('golf', 5)
-seriesCountDict['waterscapes'] = ('wat', 8)
-seriesCountDict['landscapes'] = ('land', 14)
-seriesCountDict['poms'] = ('pom', 4)
-seriesCountDict['skyscrapers'] = ('sky', 2)
-seriesCountDict['textures'] = ('tex', 6)
-seriesCountDict['main'] = ('main', 9)
+SERIES_COUNT_DICT = defaultdict(str)
+SERIES_COUNT_DICT['golf'] = ('golf', 5)
+SERIES_COUNT_DICT['waterscapes'] = ('wat', 8)
+SERIES_COUNT_DICT['landscapes'] = ('land', 14)
+SERIES_COUNT_DICT['poms'] = ('pom', 4)
+SERIES_COUNT_DICT['skyscrapers'] = ('sky', 2)
+SERIES_COUNT_DICT['textures'] = ('tex', 6)
+SERIES_COUNT_DICT['main'] = ('main', 9)
 
-seriesCountDict['light'] = ('light', 6)
-seriesCountDict['textures2'] = ('tex', 20)
+SERIES_COUNT_DICT['light'] = ('light', 6)
+SERIES_COUNT_DICT['textures2'] = ('tex', 20)
 
 @app.route("/")
 @app.route("/home")
@@ -48,39 +48,44 @@ def portfolio():
 
 @app.route("/portfolio/texture")
 def folio_textures():
-    global seriesCountDict
     series = 'textures2'
     pic_text =""
     
-    return flask.render_template('folio_textures.html', series=series, pic_text=pic_text, bname=seriesCountDict[series][0], count=seriesCountDict[series][1])
+    return flask.render_template('folio_textures.html', series=series, pic_text=pic_text, bname=SERIES_COUNT_DICT[series][0], count=SERIES_COUNT_DICT[series][1])
 
 @app.route("/portfolio/<series>")
 def folio_series(series):
-    global seriesCountDict
+    if series not in SERIES_COUNT_DICT:
+        flask.abort(404)
 
-    text_fn = "static/images/%s/series.htm" % series
-    if os.path.exists(text_fn):
+    text_fn = os.path.join("static", "images", series, "series.htm")
+    try:
         with open(text_fn) as fd:
             pic_text = fd.read()
-    else:
+    except FileNotFoundError:
         pic_text = ""
-    return flask.render_template('folio_series.html', series=series, pic_text=pic_text, bname=seriesCountDict[series][0], count=seriesCountDict[series][1])
+        
+    return flask.render_template('folio_series.html', series=series, pic_text=pic_text, bname=SERIES_COUNT_DICT[series][0], count=SERIES_COUNT_DICT[series][1])
 
 @app.route("/portfolio/view_single/<series>/<bname>/<int:pn>")
 def folio_view_single(series, bname, pn):
-    global seriesCountDict
+    if series not in SERIES_COUNT_DICT:
+        flask.abort(404)
+        
+    max_count = SERIES_COUNT_DICT[series][1]
 
     if pn <= 0:
         pn = 1
-    elif pn > seriesCountDict[series][1]:
-        pn = seriesCountDict[series][1]
+    elif pn > max_count:
+        pn = max_count
 
-    text_fn = "static/images/%s/%s%s.htm" % (series, bname, pn)
-    if os.path.exists(text_fn):
+    text_fn = os.path.join("static", "images", series, f"{bname}{pn}.htm")
+    try:
         with open(text_fn) as fd:
             pic_text = fd.read()
-    else:
+    except FileNotFoundError:
         pic_text = ""
+        
     return flask.render_template('folio_view_single.html', series=series, bname=bname, pn=pn, pic_text=pic_text)
 
 

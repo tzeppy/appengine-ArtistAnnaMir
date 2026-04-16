@@ -3,9 +3,9 @@
 Make sure gcloud init has been called to set up google credentials.
 Also points to project: artistannamir
 
-### Using pyenv 3.10.5..
-% pyenv install 3.10.5
-% pyenv local 3.10.5
+### Using pyenv 3.12.3..
+% pyenv install 3.12.3
+% pyenv local 3.12.3
 % python -m venv env
 % source env/bin/activate
 % pip install -r requirements.txt
